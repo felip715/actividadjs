@@ -1,0 +1,25 @@
+body{
+    background-color: #b0b0ec;
+}
+
+header{
+    color: rgb(247, 233, 40);
+    background-color: rgb(241, 110, 16);
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+    margin: 15px;
+    font-weight:bolder;
+}
+
+nav{
+    background-color: rgb(204, 133, 111);
+    margin: 25px;
+    font-size: 22px;
+    padding: 10px;
+    
+}
+
+a{
+    padding: 5px 10px 5px 10px;
+}
