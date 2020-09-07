@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0;">
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>De Aqui</title>
+
+    <style>
+        img {
+            width: 100%;
+            height: auto;
+            max-height: 500px;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header> SE VOS </header>
+    <nav class="nav">
+
+        <a href="adivinanza.html">Adivinanza</a>
+        <a href="artistas.html">Artistas</a>
+        <a href="mascotas.html">Mascotas</a>
+        <a href="pasiones.html">Pasiones</a>
+
+    </nav>
+    <section>
+        <div class="container-lg " style="background-color: burlywood; margin-top: 15px;">
+            <div class="row">
+                <div class="col" style="text-align-last: left;font-size: 18px;margin: 5px;">
+                    Quien es? Quien es?
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col" style="text-align-last: left;font-size: 18px;margin: 5px">
+                    El que bebe por los pies
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1" style="text-align-last: left;font-size: 18px;margin: 5px">
+                    <label for="respuesta">Respuesta:</label>
+                </div>
+                <div class="col-2" style="text-align-last: left;font-size: 18px;margin-left: 5px">
+                    <input class="form-control form-control-sm" type="text" id="respuesta" style="margin-left: 4px">
+                </div>
+                <div class="col-1" style="text-align-last: left;font-size: 18px;margin-left: 5px">
+                    <input id="boton" onclick="adivinar()" class="btn btn-primary" type="submit" value="Enviar ">
+                </div>
+            </div>
+
+            <div id="pista1"  style="text-align-last: left;font-size: 18px;margin: 5px">
+
+            </div>
+
+            <div id="pista2"  style="text-align-last: left;font-size: 18px;margin: 5px">
+
+            </div>
+
+            <div id="pista3"  style="text-align-last: left;font-size: 18px;margin: 5px">
+
+            </div>
+        </div>
+    </section>
+    <script type="text/javascript">
+        var intentos = 0;
+        function adivinar() {
+            console.log("entro en adinivanza");
+            var respuesta1 = document.getElementById("respuesta").value;
+            var respuesta = respuesta1.toLowerCase();
+            if (intentos < 3)
+                if (respuesta == "arbol" || respuesta == "el arbol" || respuesta == "árbol" || respuesta == "el árbol")
+                    alert("Respuesta Correcta!!")
+                else
+                    switch (intentos) {
+                        case (0):
+                            document.getElementById("pista1").innerHTML = "1era Pista: Es un ser vivo";
+                            intentos++;
+                            break;
+                        case (1):
+                            document.getElementById("pista2").innerHTML = "2da Pista: Absorbe el dioxido de carbono y nos entrega oxigeno";
+                            intentos++;
+                            break;
+                        case (2):
+                            document.getElementById("pista3").innerHTML = "3era Pista: Si diera wifi, todos plantariamos al menos uno";
+                            intentos++;
+                            break;
+                    }
+            else
+                alert("No ha podido adivinar, la respuesta es el arbol")
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
