@@ -27,7 +27,7 @@ a{
 footer{
     background-color: rgb(241, 110, 16);
     text-align: center;
-    position: relative;
+    position: static;
     bottom: 0;
     width: 100%;
 }
