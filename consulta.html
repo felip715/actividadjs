@@ -38,30 +38,33 @@
 
             <h5>Deje su consulta y sera respondida a la brevedad, muchas gracias</h5>
 
-            <div class="form-group" style="overflow: hidden;">
-                <div class="row">
-                    <label for="consulta">Consulta:</label>
-                    <textarea class="form-control mr-2" id="consulta" rows="3" placeholder="Ingrese su consulta aquí"></textarea>
-                </div>
+            <form>
 
-                <!--div class="form-inline"-->
-
-                <!--div class="form-row"-->
-                <div class="form-group-lg form-inline">
-                    <div class="row-md form-inline">
-                        <label class="control-label mr-2" for="nombre">Nombre:</label>
-                        <input class="form-control mr-2" type="text" id="nombre" placeholder="Apellido y Nombre">
+                <div class="form-group">
+                    <div class="row">
+                        <label class="control-label ml-2" for="consulta">Consulta:</label>
+                        <input type="textarea" class="form-control ml-2 mr-2" id="consulta" rows="3"
+                            placeholder="Ingrese su consulta aquí" pattern=".{6,}" title="Ingrese una consulta mas larga" style="height: 100px" required>
                     </div>
 
-                    <div class="row-md form-inline">
-                        <label class="control-label mr-2" for="correo">Email:</label>
-                        <input type="email" class="form-control mr-2" id="correo" placeholder="Correo Electrónico">
+                    <div class="form-group-lg form-inline mt-2">
+                        <div class="row-md form-inline">
+                            <label class="control-label mr-2" for="nombre" >Nombre:</label>
+                            <input class="form-control mr-2 " type="text" id="nombre" placeholder="Apellido y Nombre" pattern="[a-zA-Z ].{6,}" title="Ingrese solo letras y espacios"  required>
+                        </div>
+
+                        <div class="row-md form-inline">
+                            <label class="control-label mr-2 " for="correo">Email:</label>
+                            <input type="email" class="form-control mr-2" id="correo" placeholder="Correo Electrónico" required>
+                        </div>
                     </div>
+
+                    <div style="overflow: hidden;">
+                        <input type="submit" class="btn btn-primary" style="float: right; margin: 5px;">
+                    </div>
+
                 </div>
-
-                <button type="submit" class="btn btn-primary" style="float: right; margin: 5px;">Enviar</button>
-
-            </div>
+            </form>
     </section>
     <footer>Illa Felipe
         <a name="contacto" href="mailto:felipeilla@hotmail.com">felipeilla@hotmail.com</a></footer>
