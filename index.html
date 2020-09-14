@@ -51,28 +51,29 @@
                     <label for="respuesta">Respuesta:</label>
                 </div>
                 <div class="col-2-sm" style="text-align-last: left;font-size: 18px;margin: 5px">
-                    <input class="form-control form-control-sm" type="text" id="respuesta" style="margin-left: 4px" autofocus="autofocus">
+                    <input class="form-control form-control-sm" type="text" id="respuesta" style="margin-left: 4px"
+                        autofocus="autofocus">
                 </div>
                 <div class="col-1-sm" style="margin-left: 10px">
                     <input id="boton" onclick="adivinar()" class="btn btn-primary" type="submit" value="Enviar ">
                 </div>
             </div>
 
-            <div id="pista1"  style="text-align-last: left;font-size: 18px;margin: 5px">
+            <div id="pista1" style="text-align-last: left;font-size: 18px;margin: 5px">
 
             </div>
 
-            <div id="pista2"  style="text-align-last: left;font-size: 18px;margin: 5px">
+            <div id="pista2" style="text-align-last: left;font-size: 18px;margin: 5px">
 
             </div>
 
-            <div id="pista3"  style="text-align-last: left;font-size: 18px;margin: 5px">
+            <div id="pista3" style="text-align-last: left;font-size: 18px;margin: 5px">
 
             </div>
         </div>
     </section>
 
-    <footer >Illa Felipe
+    <footer>Illa Felipe
         <a name="contacto" href="mailto:felipeilla@hotmail.com">felipeilla@hotmail.com</a></footer>
 
 
@@ -89,14 +90,17 @@
                 else
                     switch (intentos) {
                         case (0):
+                            document.getElementById("pista1").innerHTML = "Error, le quedan 3 intentos más";
                             document.getElementById("pista1").innerHTML = "1era Pista: Es un ser vivo";
                             intentos++;
                             break;
                         case (1):
+                            document.getElementById("pista2").innerHTML = "Error, le quedan 2 intentos más";
                             document.getElementById("pista2").innerHTML = "2da Pista: Absorbe el dioxido de carbono y nos entrega oxigeno";
                             intentos++;
                             break;
                         case (2):
+                            document.getElementById("pista3").innerHTML = "Error, le quedan el ultimo intento";
                             document.getElementById("pista3").innerHTML = "3era Pista: Si diera wifi, todos plantariamos al menos uno";
                             intentos++;
                             break;
