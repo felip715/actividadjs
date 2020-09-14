@@ -38,6 +38,16 @@
                 <div class="col-sm-" style="text-align-last: left;font-size: 18px;margin: 5px">
                     Quien es? Quien es?
                 </div>
+
+                <div class="col-sm-" style="text-align-last: right;font-size: 18px;margin: 5px">
+                    cantidad de intentos:
+                </div>
+
+                <div id="intentos" class="col-sm-" style="text-align-last: right;font-size: 18px;margin: 5px">
+
+                </div>
+
+
             </div>
 
             <div class="row">
@@ -76,8 +86,6 @@
     <footer>Illa Felipe
         <a name="contacto" href="mailto:felipeilla@hotmail.com">felipeilla@hotmail.com</a></footer>
 
-
-
     <script type="text/javascript">
         var intentos = 0;
         function adivinar() {
@@ -86,33 +94,29 @@
             var respuesta = respuesta1.toLowerCase();
             if (intentos < 3)
                 if (respuesta == "arbol" || respuesta == "el arbol" || respuesta == "árbol" || respuesta == "el árbol")
-                    alert("Respuesta Correcta!!")
+
+                    if(alert('Respuesta correcta!!')){}
+                    else window.location.reload();
+
                 else
                     switch (intentos) {
                         case (0):
-                            document.getElementById("pista1").innerHTML = "Error, le quedan 3 intentos más";
-                            document.getElementById("pista1").innerHTML = "1era Pista: Es un ser vivo";
+                            document.getElementById("pista1").innerHTML = "Error, le quedan 3 intentos más<br>1era Pista: Es un ser vivo";
                             intentos++;
                             break;
                         case (1):
-                            document.getElementById("pista2").innerHTML = "Error, le quedan 2 intentos más";
-                            document.getElementById("pista2").innerHTML = "2da Pista: Absorbe el dioxido de carbono y nos entrega oxigeno";
+                            document.getElementById("pista2").innerHTML = "Error, le quedan 2 intentos más<br>2da Pista: Absorbe el dioxido de carbono y nos entrega oxigeno";
                             intentos++;
                             break;
                         case (2):
-                            document.getElementById("pista3").innerHTML = "Error, le quedan el ultimo intento";
-                            document.getElementById("pista3").innerHTML = "3era Pista: Si diera wifi, todos plantariamos al menos uno";
+                            document.getElementById("pista3").innerHTML = "Error, le quedan el ultimo intento<br>3era Pista: Si diera wifi, todos plantariamos al menos uno";
                             intentos++;
                             break;
                     }
             else
-                alert("No ha podido adivinar, la respuesta es el arbol")
+                if(!alert('No ha podido adivinar, la respuesta es el arbol')){window.location.reload();}
         }
     </script>
-
-
-
-
 </body>
 
 </html>
